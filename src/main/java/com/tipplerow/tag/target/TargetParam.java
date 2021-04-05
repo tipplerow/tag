@@ -16,6 +16,8 @@
 package com.tipplerow.tag.target;
 
 import com.tipplerow.jam.bravais.UnitCellType;
+
+import lombok.Builder;
 import lombok.Value;
 
 /**
@@ -24,6 +26,7 @@ import lombok.Value;
  * @author Scott Shaffer
  */
 @Value
+@Builder
 public class TargetParam {
     /**
      * The enumerated type for the unit cell of the lattice.
@@ -39,4 +42,31 @@ public class TargetParam {
      * The maximum number of cells at a single lattice site.
      */
     int siteCapacity;
+
+    /**
+     * The birth rate of non-resistant tumor cells.
+     */
+    double nonResistantBirthRate;
+
+    /**
+     * The birth rate of resistant tumor cells.
+     */
+    double resistantBirthRate;
+
+    /**
+     * The death rate of non-resistant tumor cells in the absence of a
+     * therapeutic agent.
+     */
+    double nonResistantDeathRate;
+
+    /**
+     * The death rate of resistant tumor cells.
+     */
+    double resistantDeathRate;
+
+    /**
+     * The death rate of non-resistant tumor cells in the presence of a
+     * therapeutic agent.
+     */
+    double killingRate;
 }
