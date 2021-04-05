@@ -13,7 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tipplerow.tag.agent;
+package com.tipplerow.tag.target;
+
+import com.tipplerow.tag.agent.CellAgent;
+import com.tipplerow.tag.agent.CellKey;
+import com.tipplerow.tag.agent.DrugAgent;
 
 import lombok.Getter;
 import lombok.NonNull;
